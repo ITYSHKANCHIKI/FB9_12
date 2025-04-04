@@ -1,0 +1,395 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #e8f5e9;
+}
+
+h1, h2 {
+  font-family: 'Faster One', cursive;
+}
+
+/* header styles */
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* section styles */
+
+section article {
+  width: 33%;
+  float: left;
+}
+
+section p {
+  margin: 5px 0;
+}
+
+section ul {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: transparent; /* Убираем белый фон */
+  border-radius: 5px;
+}
+
+/* Карточка товара */
+.product {
+  border: 2px solid #388e3c; /* Более тёмная и толстая рамка */
+  border-radius: 5px;
+  background-color: #ffffff; /* Белый фон внутри карточки */
+  padding: 10px;
+  margin-bottom: 10px;       /* Отступ между карточками */
+}
+
+/* Заголовок товара */
+.product h2 {
+  margin: 5px 0;            /* Уменьшаем отступы */
+  color: #2e7d32;
+  line-height: 1.2;         /* Небольшое увеличение межстрочного интервала */
+  letter-spacing: 0.5px;    /* Лёгкое раздвижение букв */
+}
+
+/* Текстовые блоки внутри карточки */
+.product p {
+  margin: 5px 0;            /* Небольшой отступ между параграфами */
+  line-height: 1.3;         /* Увеличиваем высоту строки для удобства чтения */
+}
+
+#chat h2 {
+  letter-spacing: 3px; /* Увеличь, если нужно больше расстояния */
+}
+
+.admin-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+
+.app-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.app-product-card {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+#modal-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+#modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  z-index: 1001;
+}
+
+
+input, textarea {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+button {
+  background-color: #222; /* Тёмный фон */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Зелёная кнопка */
+.button-green {
+  background-color: #28a745;
+}
+.button-green:hover {
+  background-color: #218838;
+}
+
+/* Жёлтая кнопка */
+.button-yellow {
+  background-color: #ffc107;
+  color: #000;
+}
+.button-yellow:hover {
+  background-color: #e0a800;
+}
+
+/* Красная кнопка */
+.button-red {
+  background-color: #dc3545;
+}
+.button-red:hover {
+  background-color: #bd2130;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+#chat {
+  width: 100%;
+  max-width: 84%; 
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 50vh; 
+}
+
+#chat h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#chatContainer {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  height: calc(100% - 100px); 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#chatContainer .message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  max-width: 80%;
+}
+
+#chatContainer .user-message {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+  text-align: right;
+}
+
+#chatContainer .support-message {
+  background-color: #f8d7da;
+  align-self: flex-start;
+  text-align: left;
+}
+
+#inputContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center; 
+}
+
+#chatInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px; 
+}
+
+.buttonchat {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  width: 120px;
+  cursor: pointer;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  height: 40px; 
+}
+
+.buttonchat:hover {
+  background-color: #218838;
+}
+
+#chatInput:invalid {
+  border-color: #f8d7da;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px; 
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  width: 100%; 
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-container button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+.bg-mint-200 {
+  background-color: #89b989;
+}
+
+.bg-gray-900 {
+  background-color: #204f15; 
+  color: #000000;
+}
+    
+.small-button {
+  width: 200px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Делаем товары в колонку, каждый на своей строке */
+.product {
+  display: block;         /* вместо float или inline-block */
+  width: 800px;           /* растягиваем на всю ширину контейнера */
+  margin-bottom: 20px;    /* отступ между карточками */
+  box-sizing: border-box; /* на всякий пожарный */
+}
+
+.button-red, .button-yellow {
+  font-size: 16px;
+  padding: 10px 16px;
+  min-width: 120px;  /* Одинаковая ширина кнопок */
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-red {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-yellow {
+  background-color: #ffc107;
+  color: black;
+}
+
+.app-product-card button {
+  margin-left: 10px;
+}
+
+.app-product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
